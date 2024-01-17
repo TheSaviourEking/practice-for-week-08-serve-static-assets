@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
     
     // GET /static
     if (req.method === 'GET' && req.url.startsWith('/static')) {
-	let reqDataPath = req.url.split('/');
+	const reqDataPath = req.url.split('/');
 	const dirName = './assets';
 	const fileName = reqDataPath.slice(-1).join('');
 
